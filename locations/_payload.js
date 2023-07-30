@@ -1,0 +1,1 @@
+export default {data:{"options:asyncdata:/locations":null},prerenderedAt:1690758294766}
