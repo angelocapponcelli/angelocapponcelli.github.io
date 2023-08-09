@@ -1,9 +1,20 @@
+Apri cartella D:\GithubPersonalWebsite\Backend in VScode
+2 - node index.js
+
+Apri cartella D:\GithubPersonalWebsite in VScode
+1 - npx serve dist
+3 - npm run generate
+(4) - npm run deploy
+5 - npm run dev
+
 # T08 - Template (GH-Pages)
 
 This is the implementation of the project for GitHub-Pages
 
 ## Preliminary steps
+
 As usual, the first things to do are:
+
 - moving inside the folder with the terminal (or opening the project with VSCode) and then using:
 
       npm install
@@ -12,14 +23,16 @@ As usual, the first things to do are:
 
       npm run dev
 
-    or
+  or
 
       npm run dev -- -o
-    
-    to automatically open your project in a new tab of your browser.
+
+  to automatically open your project in a new tab of your browser.
 
 ## Configuration
+
 To make the project work on GH-Pages there are a few steps to do:
+
 - install gh-pages
 
       npm install gh-pages --save-dev
@@ -29,6 +42,7 @@ To make the project work on GH-Pages there are a few steps to do:
       script: {
         deploy: "gh-pages -d dist --dotfiles"
       }
+
   The "--dotfiles" option allows to push files starting with "." to the repo. This way it is possible to push the .nojekyll file.
 
 - add an empty .nojekyll file in the public folder
@@ -39,6 +53,7 @@ To make the project work on GH-Pages there are a few steps to do:
       }
 
 ## Local Serve
+
 To help in testing the project, some additional script have been added to the package.json file.
 
 If you want to test the project locally you can remove the baseURL value.
@@ -52,10 +67,11 @@ The command
       npm run dev
 
 works properly even if you don't generate.
-  
+
 ## Deployment
+
 - When you want to generate the project for deployment use:
-  
+
       npm run generate
 
 - Then, to push the generated project, use:
@@ -66,11 +82,13 @@ works properly even if you don't generate.
   You can find the list of available options by using:
 
       npx gh-pages --help
-  
+
   For example, "--repo" allows you to set the link of your repository.
 
 ## Content
+
 The project contains:
+
 - 5 components
   - Card
   - SmallCard
