@@ -37,7 +37,18 @@ module.exports = {
     fontFamily: {
       sans: ['"DM Sans"', "sans-serif"],
     },
-    extend: {},
+    extend: {
+      spacing: {
+        x_padding_page: "9rem",
+        y_padding_page: "2rem",
+        x_padding_page_mobile: "1rem",
+        y_padding_page_mobile: "1rem",
+        inner_space: "1rem",
+      },
+      borderRadius: {
+        card_radius: "15px",
+      },
+    },
   },
   plugins: [],
 };

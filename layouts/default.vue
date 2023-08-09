@@ -2,14 +2,14 @@
     Default layout used by all the page
 -->
 <template>
-    <div class='page'>
+    <div>
         <TheHeader />
         <slot />
         <TheFooter />
     </div>
 </template>
 
-<style>
+<!--style>
 .page {
     min-height: 100vh;
     display: flex;
@@ -17,4 +17,4 @@
     background-color: lightgoldenrodyellow;
     margin: 0;
 }
-</style>
+</style-->

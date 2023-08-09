@@ -4,12 +4,14 @@
 
 html, body
 {
-    height: 100%; 
+    height: 100%;
+    @apply bg-black;
+    @apply text-white;
 }
 
-body
+/*body
 {
     background-color: black;
     color: white;
     
-}
+}*/
