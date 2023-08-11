@@ -3,21 +3,8 @@
 -->
 
 <template>
-    <footer>
-        Made by me :)
+    <footer
+        class="bg-background-light rounded-card_radius text-3xl font-semibold mx-x_padding_page mt-inner_space mb-44 p-3 h-56">
+        <span>ciao made by me</span>
     </footer>
 </template>
-
-<style>
-    footer
-    {
-        background-color: orange;
-        flex-shrink: 0;
-        text-align: center;
-        margin-top: auto;
-        border-top: 5px solid brown;
-        padding: 10px;
-
-        min-height: 1vh;
-    }
-</style>

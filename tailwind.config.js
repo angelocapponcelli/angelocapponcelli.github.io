@@ -18,8 +18,8 @@ module.exports = {
       "background-light": "#1E1B1E",
       green: "#00C39A",
       yellow: "#FFBF3C",
-      pink: "#FE6D79",
-      purple: "#8325FD",
+      pink: "#FF803C",
+      purple: "#00ABE7",
       color: {
         200: "#FAFAFF",
         300: "#F9F9FF",
