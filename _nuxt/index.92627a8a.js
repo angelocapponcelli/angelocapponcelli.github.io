@@ -1,1 +1,0 @@
-import{_ as s}from"./home-image.69516d7b.js";import{_ as t,f as o,o as n,a as e}from"./entry.c4782cc0.js";const _={},c=e("img",{id:"main-img",src:s},null,-1),i=e("h2",null," This is a description for the Dog's Hotel. The best place where dogs can rest. ",-1),r=[c,i];function a(l,d){return n(),o("main",null,r)}const h=t(_,[["render",a]]);export{h as default};
