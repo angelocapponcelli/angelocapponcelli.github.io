@@ -28,8 +28,11 @@
             </div>
             <div class="basis-1/2 flex flex-col space-y-inner_space">
                 <div class="bg-background-light rounded-card_radius text-3xl font-semibold p-3 flex justify-between">
-                    <span class="text-white">16:15:24</span>
-                    <span>Soleggiato</span>
+                    <div id="clock" onload="currentTime()"></div>
+                    <div class="text-xs text-transparent" id="idf49ff7c3b75fb"
+                        a='{"t":"s","v":"1.2","lang":"en","locs":[928],"ssot":"c","sics":"ds","cbkg":"#FFFFFF00","cfnt":"rgba(255,255,255,1)","slfs":23,"slis":25,"slgp":10,"sfnt":"a","sdr":"rl"}'>
+                        Weather Data Source: <a href="https://sharpweather.com/weather_milan/30_days/">weather forecast
+                            Milan 30 days</a></div>
                 </div>
                 <div class="flex flex-row h-full space-x-inner_space">
                     <div class="basis-1/2 rounded-card_radius bg-purple">
@@ -224,3 +227,33 @@
         </div>
     </div>
 </template>
+
+<script setup>
+function currentTime() {
+    let date = new Date();
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+
+    hh = (hh < 10) ? "0" + hh : hh;
+    mm = (mm < 10) ? "0" + mm : mm;
+    ss = (ss < 10) ? "0" + ss : ss;
+
+    let time = hh + ":" + mm + ":" + ss;
+
+    if (document.getElementById("clock")) document.getElementById("clock").innerText = time;
+    let t = setTimeout(function () { currentTime() }, 1000);
+}
+onMounted(() => {
+    currentTime();
+    //const todos = await $fetch('https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb').catch((error) => error.data)
+    //<script async src="https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb"
+
+    let pretixScript = document.createElement('script');
+    pretixScript.setAttribute('src', "https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb");
+    document.head.appendChild(pretixScript);
+});
+
+
+
+</script>
