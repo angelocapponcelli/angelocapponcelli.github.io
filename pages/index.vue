@@ -14,7 +14,8 @@
             <div class="basis-1/2">
                 <div class="flex flex-col space-y-inner_space">
                     <div class="basis-1/2 bg-background-light rounded-card_radius p-5">
-                        <h1 class="text-6xl leading-tight font-bold">Unlocking digital possibilities, one line of time</h1>
+                        <h1 class="text-5xl leading-tight font-bold">Unlocking digital possibilities, one line of code at a
+                            time!</h1>
                     </div>
                     <div class="basis-1/2 bg-background-light rounded-card_radius p-5">
                         <h3 class="text-3xl font-semibold pb-2">About</h3>
