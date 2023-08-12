@@ -69,10 +69,9 @@
                                         <path
                                             d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                     </svg>
-
                                 </NuxtLink>
                                 <NuxtLink to="/"
-                                    class="basis-1/4 bg-background-light fill-white rounded-card_radius aspect-square p-2 hover:bg-yellow transition duration-200">
+                                    class="basis-1/4 bg-background-light fill-white rounded-card_radius aspect-square p-2 hover:bg-yellow hover:fill-background-light transition duration-200">
                                     <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <path
                                             d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z" />
@@ -100,53 +99,91 @@
         </div>
 
         <div class="flex flex-row space-x-inner_space">
-            <div class="basis-7/12 bg-green rounded-card_radius p-5 flex flex-row space-x-inner_space">
+            <NuxtLink to="/"
+                class="basis-7/12 group bg-green rounded-card_radius p-5 flex flex-row space-x-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-5/12"> <img src="~/assets/img/home-image.jpg"
                         class=" h-full w-full rounded-card_radius object-cover" /></div>
-                <div class="basis-7/12">
+                <div class="basis-7/12 relative">
                     <h2 class="text-3xl"> Project name 1 </h2>
                     <h3 class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco.
                     </h3>
+                    <div
+                        class="absolute bottom-0 right-0 py-2 px-3 rounded-full flex flex-row space-x-1 group-hover:text-green group-hover:bg-white transition duration-200">
+                        <span>See details</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <div class="basis-5/12 bg-background-light rounded-card_radius p-5 flex flex-row space-x-inner_space">
+            </NuxtLink>
+            <NuxtLink to="/"
+                class="basis-5/12 group bg-background-light rounded-card_radius p-5 flex flex-row space-x-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-5/12"> <img src="~/assets/img/home-image.jpg"
                         class=" h-full w-full rounded-card_radius object-cover" /></div>
-                <div class="basis-7/12">
+                <div class="basis-7/12 relative">
                     <h2 class="text-3xl"> Project name 2 </h2>
                     <h3 class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco.
                     </h3>
+                    <div
+                        class="absolute bottom-0 right-0 p-2 rounded-full group-hover:text-background-light group-hover:bg-white transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
                 </div>
-            </div>
+            </NuxtLink>
         </div>
 
         <div class="flex flex-row space-x-inner_space">
-            <div class="basis-5/12 bg-background-light rounded-card_radius p-5 flex flex-row space-x-inner_space">
+            <NuxtLink to="/"
+                class="basis-5/12 group bg-background-light rounded-card_radius p-5 flex flex-row space-x-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-5/12"> <img src="~/assets/img/home-image.jpg"
                         class=" h-full w-full rounded-card_radius object-cover" /></div>
-                <div class="basis-7/12">
+                <div class="basis-7/12 relative">
                     <h2 class="text-3xl"> Project name 1 </h2>
                     <h3 class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco.
                     </h3>
+                    <div
+                        class="absolute bottom-0 right-0 p-2 rounded-full group-hover:text-background-light group-hover:bg-white transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <div class="basis-7/12 bg-pink rounded-card_radius p-5 flex flex-row space-x-inner_space">
+            </NuxtLink>
+            <NuxtLink to="/"
+                class="basis-7/12 group bg-pink rounded-card_radius p-5 flex flex-row space-x-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-5/12"> <img src="~/assets/img/home-image.jpg"
                         class=" h-full w-full rounded-card_radius object-cover" /></div>
-                <div class="basis-7/12">
+                <div class="basis-7/12 relative">
                     <h2 class="text-3xl"> Project name 1 </h2>
                     <h3 class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco.
                     </h3>
+                    <div
+                        class="absolute bottom-0 right-0 py-2 px-3 rounded-full flex flex-row space-x-1 group-hover:text-pink group-hover:bg-white transition duration-200">
+                        <span>See details</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
                 </div>
-            </div>
+            </NuxtLink>
         </div>
 
         <div class="flex flex-row space-x-inner_space">
@@ -246,9 +283,6 @@ function currentTime() {
 }
 onMounted(() => {
     currentTime();
-    //const todos = await $fetch('https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb').catch((error) => error.data)
-    //<script async src="https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb"
-
     let pretixScript = document.createElement('script');
     pretixScript.setAttribute('src', "https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb");
     document.head.appendChild(pretixScript);

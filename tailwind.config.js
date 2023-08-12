@@ -48,6 +48,9 @@ module.exports = {
       borderRadius: {
         card_radius: "15px",
       },
+      scale: {
+        101: "1.01",
+      },
     },
   },
   plugins: [],
