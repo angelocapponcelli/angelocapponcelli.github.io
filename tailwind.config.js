@@ -20,6 +20,7 @@ module.exports = {
       yellow: "#FFBF3C",
       pink: "#FF803C",
       purple: "#00ABE7",
+      red: "#FF2E2E",
       color: {
         200: "#FAFAFF",
         300: "#F9F9FF",
@@ -31,7 +32,6 @@ module.exports = {
         850: "#747396",
         900: "#55546E", //"#8D8BA7",
         1000: "#514F63", //"#767494",
-        red: "#FF2E2E",
       },
     },
     fontFamily: {

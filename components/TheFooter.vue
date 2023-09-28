@@ -51,51 +51,219 @@
             </div>
 
             <div class="basis-1/2 bg-background-light rounded-card_radius p-7">
-                <form class="w-full mx-auto flex flex-col justify-center " noValidate>
-                    <div class="flex flex-col space-y-5">
-                        <div class="flex flex-row gap-4">
-                            <div class="w-1/2">
-                                <label htmlFor="name" class="block font-semibold text-sm mb-3">
-                                    Your Name (required)
-                                </label>
-                                <input id="name" name="name" type="text" placeholder="Enter Your Name"
-                                    class="py-2 px-5 w-full border text-input text-sm placeholder-body min-h-12 bg-transparent border-white focus:outline-none  h-12 rounded-full"
-                                    autoComplete="off" spellCheck="false" aria-invalid="false" />
+                <Transition name="hidden-form" @after-leave="toggleAnimation">
+                    <form v-show="!isClosed" ref="form" @submit.prevent="sendEmail"
+                        class="w-full mx-auto flex flex-col justify-center">
+                        <div class="flex flex-col space-y-5">
+                            <div class="flex flex-row gap-4">
+                                <div class="w-1/2">
+                                    <label htmlFor="name" class="block font-semibold text-sm mb-3">
+                                        Your Name
+                                        <span class="text-red">
+                                            {{ form_name.errormsg }}
+                                        </span>
+                                    </label>
+                                    <input v-model="form_name.value"
+                                        :class="{ 'error': !isValid(form_name) && form_name.isModified }" id="name"
+                                        name="name" type="text" placeholder="Enter Your Name"
+                                        class="py-2 px-5 w-full border text-input text-sm placeholder-body min-h-12 bg-transparent border-white focus:outline-none  h-12 rounded-full"
+                                        autoComplete="off" spellCheck="false" aria-invalid="false" />
+                                </div>
+                                <div class="w-1/2">
+                                    <label htmlFor="email" class="block font-semibold text-sm mb-3">
+                                        Your Email
+                                        <span class="text-red">
+                                            {{ form_email.errormsg }}
+                                        </span>
+                                    </label>
+                                    <input v-model.trim="form_email.value"
+                                        :class="{ 'error': !isValid(form_email) && form_email.isModified }" id="email"
+                                        name="email" type="email" placeholder="Enter Your Email"
+                                        class="py-2 px-5 w-full border text-input text-sm placeholder-body min-h-12 bg-transparent border-white focus:outline-none  h-12 rounded-full"
+                                        autoComplete="off" spellCheck="false" aria-invalid="false" />
+                                </div>
                             </div>
-                            <div class="w-1/2">
-                                <label htmlFor="email" class="block font-semibold text-sm mb-3">
-                                    Your Email (required)
+                            <div class="relative mb-4">
+                                <label htmlFor="message" class="block font-semibold text-sm mb-3">
+                                    Message
+                                    <span class="text-red">
+                                        {{ form_text.errormsg }}
+                                    </span>
                                 </label>
-                                <input id="email" name="email" type="email" placeholder="Enter Your Email"
-                                    class="py-2 px-5 w-full border text-input text-sm placeholder-body min-h-12 bg-transparent border-white focus:outline-none  h-12 rounded-full"
-                                    autoComplete="off" spellCheck="false" aria-invalid="false" />
+                                <textarea id="message" name="message" v-model="form_text.value"
+                                    :class="{ 'error': !isValid(form_text) && form_text.isModified }"
+                                    class="px-4 py-3 flex items-center w-full text-heading text-sm bg-transparent border focus:outline-none focus:border-heading placeholder-body rounded-3xl h-36"
+                                    autoComplete="off" spellCheck="false" rows={6}
+                                    placeholder="Write your message here"></textarea>
+                            </div>
+                            <div class="flex justify-end">
+                                <button data-variant="flat" v-if="!isWaiting" type="submit"
+                                    class="text-yellow py-2 px-3 rounded-full flex flex-row space-x-2 hover:text-black hover:bg-yellow transition duration-200">
+                                    <span>Send message</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                        <div class="relative mb-4">
-                            <label htmlFor="message" class="block font-semibold text-sm mb-3">
-                                Message
-                            </label>
-                            <textarea id="message" name="message"
-                                class="px-4 py-3 flex items-center w-full text-heading text-sm focus:outline-none bg-transparent border focus:outline-none focus:border-heading placeholder-body rounded-3xl h-36"
-                                autoComplete="off" spellCheck="false" rows={6}
-                                placeholder="Write your message here"></textarea>
+                    </form>
+                </Transition>
+                <Transition name="hidden-msg">
+                    <div v-show="isToggled">
+                        <p class="p-4 text-xl text-center">Thank you for getting in touch! <br>
+                            Your message has been successfully sent, and I will respond to your request as soon as possible.
+                        </p>
+                        <div class="flex justify-center">
+                            <dotlottie-player v-show="isToggled"
+                                src="https://lottie.host/80f38d3d-247f-408e-950f-63f21e24adf1/AeIWlzMBo5.json"
+                                background="Transparent" speed="1" style="width: 300px; height: 300px" direction="1"
+                                mode="normal" loop autoplay></dotlottie-player>
                         </div>
-                        <div class="flex justify-end">
-                            <button data-variant="flat" type="submit"
-                                class="text-yellow py-2 px-3 rounded-full flex flex-row space-x-2 hover:text-black hover:bg-yellow transition duration-200">
-                                <span>Send message</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                                </svg>
-                            </button>
-                        </div>
+
                     </div>
-                </form>
+                </Transition>
             </div>
         </div>
         <p class="w-full text-center pt-5 text-color-600">This site was crafted by yours truly :)</p>
 
     </footer>
 </template>
+
+<script>
+import emailjs from '@emailjs/browser';
+
+export default {
+    data() {
+        return {
+            form_name: {
+                value: "", //its value
+                errormsg: "", //its error message
+                isModified: false, //if the field have been touched at least once
+                typeText: 'short' //it can be of type short, long, email
+            },
+            form_email: {
+                value: "", //its value
+                errormsg: "", //its error message
+                isModified: false, //if the field have been touched at least once
+                typeText: 'email' //it can be of type short, long, email
+            },
+            form_text: {
+                value: "", //its value
+                errormsg: "", //its error message
+                isModified: false, //if the field have been touched at least once
+                typeText: 'long' //it can be of type short, long, email
+            },
+            isClosed: false,
+            isToggled: false,
+            isWaiting: false,
+        }
+    },
+    mounted() {
+        let recaptchaScript = document.createElement('script')
+        recaptchaScript.setAttribute('src', 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs')
+        recaptchaScript.setAttribute('type', 'module')
+        document.head.appendChild(recaptchaScript)
+    },
+    methods: {
+        sendEmail() {
+
+            this.form_name.isModified = true;
+            this.form_email.isModified = true;
+            this.form_text.isModified = true;
+
+            if (this.isValid(this.form_name) &&
+                this.isValid(this.form_email) &&
+                this.isValid(this.form_text)) {
+                this.isWaiting = true;
+
+                //await new Promise(r => setTimeout(r, 1000));//force animation for demo porpouse
+                var context = this;
+                context.isClosed = true;
+
+                emailjs.sendForm('service_sl20z59'/*'YOUR_SERVICE_ID'*/, 'template_0p6cw89'/*'YOUR_TEMPLATE_ID'*/, this.$refs.form, 'sSHYFp1Oo3xEfi5B4' /*'YOUR_PUBLIC_KEY'*/)
+                    .then((result) => {
+                        //alert('SUCCESS!', result.text); TODO
+
+                    }, (error) => {
+                        alert('FAILED...', error.text);
+                    });
+            } else {/* alert('Not send'); TODO */ }
+        },
+        toggleAnimation() {
+            this.isToggled = true;
+        },
+        isRequired(object) {
+            return object.value.length === 0 || !object.isModified;
+        },
+        isValid(object, required = true) {
+            if (!object.isModified) {
+                return false;
+            }
+            switch (object.typeText) {
+                case 'long':
+                    if (object.value.replaceAll(" ", "").length < 5) {
+                        object.errormsg = "too short";
+                        return false;
+                    }
+                    if (object.value.replaceAll(" ", "").length > 300) {
+                        object.errormsg = "too long"
+                        return false;
+                    }
+                    break;
+                case 'short':
+                    if (object.value.replaceAll(" ", "").length < 1) {
+                        if (required) {
+                            object.errormsg = "cannot be empty";
+                        }
+                        return !required;
+                    }
+                    if (object.value.replaceAll(" ", "").length > 30) {
+                        object.errormsg = "too long"
+                        return false;
+                    }
+                    break;
+                case 'email':
+                    const validate = (email) => {
+                        return String(email)
+                            .toLowerCase()
+                            .match(
+                                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                            );
+                    };
+                    if (object.value.replaceAll(" ", "").length < 1) {
+                        object.errormsg = "cannot be empty";
+                        return false;
+                    }
+                    if (validate(object.value) === null) {
+                        object.errormsg = "must be valid"
+                        return false;
+                    }
+                    break;
+            }
+
+            object.errormsg = "";
+            return true;
+        },
+        onresize(event) {
+            if (window.innerWidth >= 576) {
+                this.numberSlides = 3;
+                return;
+            }
+            this.numberSlides = 1;
+        }
+    },
+    watch: {
+        'form_name.value'(newValue, oldValue) {
+            this.form_name.isModified = true;
+        },
+        'form_email.value'(newValue, oldValue) {
+            this.form_email.isModified = true;
+        },
+        'form_text.value'(newValue, oldValue) {
+            this.form_text.isModified = true;
+        }
+    },
+}
+</script>

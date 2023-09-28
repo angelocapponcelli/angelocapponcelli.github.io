@@ -37,4 +37,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => ["dotlottie-player"].includes(tag),
+    },
+  },
 });
