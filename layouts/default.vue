@@ -2,12 +2,12 @@
     Default layout used by all the page
 -->
 <template>
-    <div class="hidden lg:block max-w-[2050px] mx-auto">
+    <div class=" max-w-[2050px] mx-auto">
         <TheHeader />
         <slot />
         <TheFooter />
     </div>
-    <div class="block lg:hidden max-w-[2050px] mx-auto">
+    <div class="hidden max-w-[2050px] mx-auto">
         <h1 class="text-3xl">
             Still constructing...
         </h1>

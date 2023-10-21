@@ -3,7 +3,7 @@
 -->
 <template>
     <header
-        class="bg-background-light rounded-card_radius text-3xl font-semibold mx-32 mt-y_padding_page p-3 sticky top-5 z-50 shadow-[0px_20px_80px_2px_rgba(0,0,0,0.60)] shadow-black">
+        class="bg-background-light rounded-card_radius text-3xl font-semibold xl:mx-32 mx-2 mt-y_padding_page p-3 sticky top-5 z-50 shadow-[0px_20px_80px_2px_rgba(0,0,0,0.60)] shadow-black">
         <span class="text-green">Angelo</span>
         <span>Capponcelli</span>
     </header>
