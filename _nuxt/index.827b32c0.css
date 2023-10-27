@@ -1,0 +1,1 @@
+.reveal-text{visibility:hidden}.line{display:flex;overflow:hidden}.line,.reveal{position:relative}.reveal{opacity:0;transform:translateY(100px);transition:all 1.5s ease}.reveal.active{opacity:1;transform:translateY(0)}
