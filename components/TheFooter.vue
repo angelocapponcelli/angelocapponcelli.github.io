@@ -4,8 +4,8 @@
 
 <template>
     <footer class="xl:mx-x_padding_page mx-x_padding_page_mobile mt-inner_space pb-4 h-fit">
-        <div class="flex lg:flex-row flex-col lg:space-x-inner_space lg:space-y-inner_space space-y-inner_space">
-            <div class="basis-1/2 flex flex-col space-y-inner_space grow">
+        <div class="flex lg:flex-row flex-col lg:space-x-inner_space lg:space-y-0 space-y-inner_space">
+            <div class="basis-1/2 flex flex-col space-y-inner_space grow reveal">
                 <div
                     class="bg-yellow rounded-card_radius lg:px-12 px-inner_space lg:py-0 py-inner_space lg:grow text-black flex flex-col justify-center lg:space-y-8 space-y-4">
                     <h1 class="lg:text-5xl text-4xl leading-tight font-bold">Let's Connect!</h1>
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="basis-1/2 bg-background-light rounded-card_radius lg:p-7 p-inner_space">
+            <div class="basis-1/2 bg-background-light rounded-card_radius lg:p-7 p-inner_space reveal">
                 <Transition name="hidden-form" @after-leave="toggleAnimation">
                     <form v-show="!isClosed" ref="form" @submit.prevent="sendEmail"
                         class="w-full mx-auto flex flex-col justify-center">

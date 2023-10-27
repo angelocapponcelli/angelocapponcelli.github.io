@@ -13,12 +13,13 @@
         <div class="flex lg:flex-row flex-col lg:space-x-inner_space space-x-0 lg:space-y-0 space-y-inner_space">
             <div class="basis-1/2">
                 <div class="flex flex-col space-y-inner_space">
-                    <div class="basis-1/2 bg-background-light rounded-card_radius p-5">
-                        <h1 class="lg:text-5xl text-4xl leading-tight font-bold">Unlocking digital possibilities, one line
+                    <div class="basis-1/2 bg-background-light rounded-card_radius p-5 reveal">
+                        <h1 class="lg:text-5xl text-4xl leading-tight font-bold ">Unlocking digital
+                            possibilities, one line
                             of code at a
                             time!</h1>
                     </div>
-                    <div class="basis-1/2 bg-background-light rounded-card_radius p-5">
+                    <div class="basis-1/2 bg-background-light rounded-card_radius p-5 reveal">
                         <h3 class="text-3xl font-semibold pb-2">About</h3>
                         <p class="text-xl">Enthusiastic student engineer with a passion for software development and
                             technology.
@@ -28,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="basis-1/2 flex flex-col space-y-inner_space">
+            <div class="basis-1/2 flex flex-col space-y-inner_space reveal">
                 <div
                     class="bg-background-light rounded-card_radius text-3xl font-semibold p-3 lg:flex hidden justify-between">
                     <div id="clock" onload="currentTime()"></div>
@@ -129,7 +130,7 @@
             </div>
         </div>
 
-        <div class="basis-full bg-background-light rounded-card_radius px-5 py-3 flex justify-between items-center">
+        <div class="basis-full bg-background-light rounded-card_radius px-5 py-3 flex justify-between items-center reveal">
             <h2 class="text-3xl font-semibold">Projects</h2>
             <span>
                 <!--NuxtLink to="/"
@@ -145,7 +146,7 @@
 
         <div class="flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space">
             <NuxtLink to="https://polimi-game-collective.itch.io/dark-unknown" target="_blank"
-                class="basis-7/12 group bg-green rounded-card_radius p-5 flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
+                class="reveal basis-7/12 group bg-green rounded-card_radius p-5 flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-6/12"> <img src="~/assets/img/dark-unknown.jpg"
                         class=" h-full w-full rounded-card_radius object-cover" /></div>
                 <div class="basis-6/12 relative lg:pb-0 pb-12">
@@ -166,7 +167,7 @@
                 </div>
             </NuxtLink>
             <div
-                class="basis-5/12 group bg-background-light rounded-card_radius p-5  flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
+                class="reveal basis-5/12 group bg-background-light rounded-card_radius p-5  flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-5/12 flex justify-center items-center"> <img src="~/assets/img/IoT.png"
                         class="h-fit max-w-full lg:max-h-fit max-h-40 rounded-card_radius object-cover" /></div>
                 <div class="basis-7/12 relative">
@@ -189,7 +190,7 @@
 
         <div class="flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col-reverse space-x-0 space-y-inner_space">
             <div
-                class="basis-5/12 group bg-background-light rounded-card_radius p-5 flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
+                class="reveal basis-5/12 group bg-background-light rounded-card_radius p-5 flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <!--div class="basis-5/12"> <img src="~/assets/img/home-image.jpg"
                         class=" h-full w-full rounded-card_radius object-cover" /></div-->
                 <div class="basis-12/12 relative">
@@ -210,7 +211,7 @@
                 </div>
             </div>
             <div
-                class="basis-7/12 group bg-pink rounded-card_radius p-5 flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
+                class="reveal basis-7/12 group bg-pink rounded-card_radius p-5 flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space hover:shadow-md hover:transform hover:scale-101 transition duration-1000">
                 <div class="basis-4/12 flex justify-center items-center"> <img src="~/assets/img/data-analysis.png"
                         class="h-fit max-w-full lg:max-h-fit max-h-40 rounded-card_radius object-cover" /></div>
                 <div class="basis-8/12 relative">
@@ -233,14 +234,14 @@
 
         <div class="flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space">
             <div class="basis-9/12 flex flex-col space-y-inner_space">
-                <div class="bg-background-light rounded-card_radius p-5">
+                <div class="bg-background-light rounded-card_radius p-5 reveal">
                     <h2 class="text-3xl font-semibold">Skills</h2>
                 </div>
                 <div
                     class="flex lg:flex-row lg:space-x-inner_space lg:space-y-0 flex-col space-x-0 space-y-inner_space h-full">
                     <div class="basis-2/3 flex flex-col space-y-inner_space">
                         <div
-                            class="basis-1/2 bg-purple rounded-card_radius p-5 flex lg:flex-row flex-col lg:space-x-7 lg:space-y-0 space-y-inner_space">
+                            class="reveal basis-1/2 bg-purple rounded-card_radius p-5 flex lg:flex-row flex-col lg:space-x-7 lg:space-y-0 space-y-inner_space">
                             <div
                                 class="lg:basis-4/12 bg-[url('~/assets/img/ai.png')] bg-contain bg-no-repeat bg-center lg:h-auto h-40">
                             </div>
@@ -252,7 +253,7 @@
 
                         </div>
                         <div
-                            class="basis-1/2 bg-background-light rounded-card_radius p-5 flex lg:flex-row flex-col lg:space-x-7 lg:space-y-0 space-y-inner_space">
+                            class="reveal basis-1/2 bg-background-light rounded-card_radius p-5 flex lg:flex-row flex-col lg:space-x-7 lg:space-y-0 space-y-inner_space">
                             <div
                                 class="lg:basis-4/12 bg-[url('~/assets/img/server.png')] bg-contain bg-no-repeat bg-center lg:h-auto h-40">
                             </div>
@@ -266,12 +267,12 @@
                     </div>
                     <div class="basis-1/3 flex flex-col space-y-inner_space">
                         <div class="flex flex-row space-x-inner_space">
-                            <div class="bg-background-light rounded-card_radius p-5"> <img src="~/assets/img/c.png"
+                            <div class="bg-background-light rounded-card_radius p-5 reveal"> <img src="~/assets/img/c.png"
                                     class=" h-full w-full rounded-card_radius object-cover" /></div>
-                            <div class="bg-background-light rounded-card_radius p-5"> <img src="~/assets/img/c++.png"
+                            <div class="bg-background-light rounded-card_radius p-5 reveal"> <img src="~/assets/img/c++.png"
                                     class=" h-full w-full rounded-card_radius object-cover" /></div>
                         </div>
-                        <div class="bg-green rounded-card_radius p-3 flex flex-row space-x-2 items-center grow">
+                        <div class="bg-green rounded-card_radius p-3 flex flex-row space-x-2 items-center grow reveal">
                             <div
                                 class="lg:grow bg-[url('~/assets/img/cyber-eye.png')] bg-contain bg-no-repeat bg-center w-full lg:h-full h-24">
                             </div>
@@ -280,40 +281,43 @@
                             </p>
                         </div>
                         <div class="flex flex-row space-x-inner_space">
-                            <div class="bg-background-light rounded-card_radius p-5"> <img src="~/assets/img/python.png"
-                                    class=" h-full w-full rounded-card_radius object-cover" /></div>
-                            <div class="bg-background-light rounded-card_radius p-5"> <img src="~/assets/img/java.png"
-                                    class=" h-full w-full rounded-card_radius object-cover" /></div>
+                            <div class="bg-background-light rounded-card_radius p-5 reveal"> <img
+                                    src="~/assets/img/python.png" class=" h-full w-full rounded-card_radius object-cover" />
+                            </div>
+                            <div class="bg-background-light rounded-card_radius p-5 reveal"> <img
+                                    src="~/assets/img/java.png" class=" h-full w-full rounded-card_radius object-cover" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="basis-3/12 flex flex-col space-y-inner_space">
-                <div class="bg-background-light rounded-card_radius p-5">
+                <div class="bg-background-light rounded-card_radius p-5 reveal">
                     <h2 class="text-3xl italic">Soft skills</h2>
                 </div>
-                <div class="bg-background-light rounded-card_radius text-2xl p-3">
+                <div class="bg-background-light rounded-card_radius text-2xl p-3 reveal">
                     Problem-Solving
                 </div>
-                <div class="bg-background-light rounded-card_radius text-2xl p-3">
+                <div class="bg-background-light rounded-card_radius text-2xl p-3 reveal">
                     Communication
                 </div>
-                <div class="bg-background-light rounded-card_radius text-2xl p-3">
+                <div class="bg-background-light rounded-card_radius text-2xl p-3 reveal">
                     Adaptability
                 </div>
-                <div class="bg-background-light rounded-card_radius text-2xl p-3">
+                <div class="bg-background-light rounded-card_radius text-2xl p-3 reveal">
                     Teamwork
                 </div>
-                <div class="bg-background-light rounded-card_radius text-2xl p-3">
+                <div class="bg-background-light rounded-card_radius text-2xl p-3 reveal">
                     Time Management
                 </div>
-                <div class="bg-background-light rounded-card_radius text-2xl p-3">
+                <div class="bg-background-light rounded-card_radius text-2xl p-3 reveal">
                     Attention to Detail
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 
 <script setup>
 function currentTime() {
@@ -331,13 +335,144 @@ function currentTime() {
     if (document.getElementById("clock")) document.getElementById("clock").innerText = time;
     let t = setTimeout(function () { currentTime() }, 1000);
 }
+function splitFunction() {
+    let splitWords = function (selector) {
+        var elements = document.querySelectorAll(selector);
+
+        elements.forEach(function (el) {
+            el.dataset.splitText = el.textContent;
+            el.innerHTML = el.textContent
+                .split(/\s/)
+                .map(function (word) {
+                    return word
+                        .split("-")
+                        .map(function (word) {
+                            return '<span class="word">' + word + "</span>";
+                        })
+                        .join('<span class="hyphen">-</span>');
+                })
+                .join('<span class="whitespace"> </span>');
+        });
+    };
+
+    let splitLines = function (selector) {
+        var elements = document.querySelectorAll(selector);
+
+        splitWords(selector);
+
+        elements.forEach(function (el) {
+            var lines = getLines(el);
+
+            var wrappedLines = "";
+            lines.forEach(function (wordsArr) {
+                wrappedLines += '<span class="line"><span class="words">';
+                wordsArr.forEach(function (word) {
+                    wrappedLines += word.outerHTML;
+                });
+                wrappedLines += "</span></span>";
+            });
+            el.innerHTML = wrappedLines;
+        });
+    };
+
+    let getLines = function (el) {
+        var lines = [];
+        var line;
+        var words = el.querySelectorAll("span");
+        var lastTop;
+        for (var i = 0; i < words.length; i++) {
+            var word = words[i];
+            if (word.offsetTop != lastTop) {
+                // Don't start with whitespace
+                if (!word.classList.contains("whitespace")) {
+                    lastTop = word.offsetTop;
+
+                    line = [];
+                    lines.push(line);
+                }
+            }
+            line.push(word);
+        }
+        return lines;
+    };
+
+    splitLines(".reveal-text");
+
+    /*let revealText = document.querySelectorAll(".reveal-text");
+
+    gsap.registerPlugin(ScrollTrigger);
+    let revealLines = revealText.forEach((element) => {
+        const lines = element.querySelectorAll(".words");
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                toggleActions: "restart none none reset"
+            }
+        });
+        tl.set(element, { autoAlpha: 1 });
+        tl.from(lines, 1, {
+            yPercent: 100,
+            ease: Power3.out,
+            stagger: 0.25,
+            delay: 0.2
+        });
+    });*/
+}
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 0;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        } else {
+            //reveals[i].classList.remove("active");
+        }
+    }
+}
+
 onMounted(() => {
     currentTime();
     let pretixScript = document.createElement('script');
     pretixScript.setAttribute('src', "https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb");
     document.head.appendChild(pretixScript);
+
+    splitFunction();
+
+    window.addEventListener("scroll", reveal);
+    reveal();
 });
 
 
-
 </script>
+
+<style>
+.reveal-text {
+    visibility: hidden;
+}
+
+.line {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    /*default 150px*/
+    opacity: 0;
+    transition: 1.5s all ease;
+    /*default 1s*/
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+</style>
