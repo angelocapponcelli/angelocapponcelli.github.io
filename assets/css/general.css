@@ -7,6 +7,29 @@ html, body
     height: 100%;
     @apply bg-black;
     @apply text-white;
+    scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #1E1B1E #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #1E1B1E;
+    border-radius: 8px;
+    border: 0px solid #ffffff;
 }
 
 /*body

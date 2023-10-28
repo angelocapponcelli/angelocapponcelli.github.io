@@ -32,11 +32,22 @@
             <div class="basis-1/2 flex flex-col space-y-inner_space reveal">
                 <div
                     class="bg-background-light rounded-card_radius text-3xl font-semibold p-3 lg:flex hidden justify-between">
-                    <div id="clock" onload="currentTime()"></div>
-                    <div class="text-xs text-transparent" id="idf49ff7c3b75fb"
+                    <div id="clock" onload="currentTime()" class="h-fit my-auto"></div>
+                    <div>
+                        <NuxtLink to="#contact"
+                            class="text-yellow py-1 px-3 rounded-full flex flex-row space-x-3 hover:text-black hover:bg-yellow transition duration-200">
+                            <span class="text-lg font-normal">Contact me</span>
+                            <dotlottie-player src="https://lottie.host/0161f23f-2187-4ec2-9ca4-823c6b25e170/6MbKAdgdFg.json"
+                                background="transparent" speed="0.8" class="w-7 h-7" direction="1" mode="normal" loop
+                                autoplay></dotlottie-player>
+                        </NuxtLink>
+
+                    </div>
+                    <!-- Weather --
+                        div class="text-xs text-transparent" id="idf49ff7c3b75fb"
                         a='{"t":"s","v":"1.2","lang":"en","locs":[928],"ssot":"c","sics":"ds","cbkg":"#FFFFFF00","cfnt":"rgba(255,255,255,1)","slfs":23,"slis":25,"slgp":10,"sfnt":"a","sdr":"rl"}'>
                         Weather Data Source: <a href="https://sharpweather.com/weather_milan/30_days/">weather forecast
-                            Milan 30 days</a></div>
+                            Milan 30 days</a></div-->
                 </div>
                 <div class="flex lg:flex-row flex-col h-full lg:space-x-inner_space lg:space-y-0 space-y-inner_space">
                     <div class="lg:basis-1/2 h-[400px] lg:h-auto rounded-card_radius bg-purple relative">
@@ -441,6 +452,12 @@ onMounted(() => {
     let pretixScript = document.createElement('script');
     pretixScript.setAttribute('src', "https://static1.sharpweather.com/widgetjs/?id=idf49ff7c3b75fb");
     document.head.appendChild(pretixScript);
+
+    // Lottie animation HelloHand
+    let recaptchaScript = document.createElement('script');
+    recaptchaScript.setAttribute('src', "https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs");
+    recaptchaScript.setAttribute('type', 'module');
+    document.head.appendChild(recaptchaScript);
 
     splitFunction();
 

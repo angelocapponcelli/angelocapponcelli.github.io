@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="basis-1/2 bg-background-light rounded-card_radius lg:p-7 p-inner_space reveal">
+            <div class="basis-1/2 bg-background-light rounded-card_radius lg:p-7 p-inner_space reveal" id="contact">
                 <Transition name="hidden-form" @after-leave="toggleAnimation">
                     <form v-show="!isClosed" ref="form" @submit.prevent="sendEmail"
                         class="w-full mx-auto flex flex-col justify-center">
