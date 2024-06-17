@@ -1,12 +1,3 @@
-Apri cartella D:\GithubPersonalWebsite\Backend in VScode
-2 - node index.js
-
-Apri cartella D:\GithubPersonalWebsite in VScode
-1 - npx serve dist
-3 - npm run generate
-(4) - npm run deploy
-5 - npm run dev
-
 # T08 - Template (GH-Pages)
 
 This is the implementation of the project for GitHub-Pages
@@ -108,3 +99,13 @@ The project contains:
 - The server (the same that was available in a previous repository)
 
 Most of the content is commented to explain how things works.
+
+
+Open folder D:\GithubPersonalWebsite\Backend in VScode
+2 - node index.js
+
+Open folder D:\GithubPersonalWebsite in VScode
+1 - npx serve dist
+3 - npm run generate
+(4) - npm run deploy
+5 - npm run dev
