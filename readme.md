@@ -1,4 +1,4 @@
-# T08 - Template (GH-Pages)
+# Template (GH-Pages)
 
 This is the implementation of the project for GitHub-Pages
 
